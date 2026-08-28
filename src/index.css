@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --brand-blue: #0284C7;
+  --brand-blue-hover: #0369A1;
+  --urgent-red: #EF4444;
+  --urgent-bg: #FEF2F2;
+  --medium-gold: #D97706;
+  --medium-bg: #FFFBEB;
+  --low-blue: #2563EB;
+  --low-bg: #EFF6FF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ADHD Friendly High-Contrast Focus & Anti-Friction Elements */
+.adhd-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.adhd-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+.adhd-alert-pulse {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+}
+
+/* Custom Scrollbars for Kanban columns */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
